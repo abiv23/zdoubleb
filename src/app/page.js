@@ -1,61 +1,40 @@
 // src/app/page.js
 import Link from 'next/link';
 import Image from 'next/image';
+import ParallaxHero from '@/components/home/parallax-hero';
+import TestimonialCarousel from '@/components/home/testimonial-carousel';
+import AnimatedStats from '@/components/home/animated-stats';
 
 export const metadata = {
-  title: "Calgary's Premier Construction Company",
-  description: "Z Double B Construction provides high-quality construction services in Calgary, Alberta. Specializing in commercial and residential construction.",
+  title: "Denver's Premier Window Company",
+  description: "Z Double B Construction provides high-quality construction services in Denver, Arvada, and Boulder. Specializing in commercial and residential construction.",
 };
+
+const testimonials = [
+  {
+    name: "John Smith",
+    role: "Commercial Client",
+    quote: "Z Double B Construction delivered our office renovation project on time and on budget. Their attention to detail and quality of work exceeded our expectations.",
+    projectType: "Commercial Construction"
+  },
+  {
+    name: "Sarah Johnson",
+    role: "Residential Client",
+    quote: "We couldn't be happier with our new home. The Z Double B team was professional, responsive, and truly cared about bringing our vision to life.",
+    projectType: "Residential Construction"
+  },
+  {
+    name: "Michael Brown",
+    role: "Restaurant Owner",
+    quote: "The renovation of our restaurant was completed with minimal disruption to our business. The quality of work was exceptional and our customers love the new space.",
+    projectType: "Renovation"
+  }
+];
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative h-screen">
-        {/* Hero Background Image */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-          <Image
-            src="/images/construction-hero.jpg"
-            alt="Z Double B Construction - Building Calgary's Future"
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-        </div>
-        
-        {/* Hero Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-          <div className="text-center md:text-left pt-20">
-            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-              <span className="block">Building Calgary's</span>
-              <span className="block text-blue-400">Future Together</span>
-            </h1>
-            <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl md:mx-0">
-              Quality construction services with a focus on client satisfaction, craftsmanship, and timely delivery.
-            </p>
-            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center md:justify-start">
-              <div className="rounded-md shadow">
-                <Link
-                  href="/contact"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10"
-                >
-                  Get Started
-                </Link>
-              </div>
-              <div className="mt-3 sm:mt-0 sm:ml-3">
-                <Link
-                  href="/projects"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
-                >
-                  View Projects
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ParallaxHero />
 
       {/* Services Section */}
       <section className="py-16 bg-white">
@@ -224,6 +203,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <AnimatedStats />
+
       {/* Projects Showcase */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -320,72 +301,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">What Our Clients Say</h2>
-            <p className="mt-4 text-lg text-gray-500">
-              Don't just take our word for it
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Testimonial 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
-                  <svg className="h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.309 17.708C22.196 15.66 22.006 13.03 22 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292zm-11.007 0C11.19 15.66 10.999 13.03 10.993 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292z"/>
-                  </svg>
-                </div>
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">John Smith</h4>
-                  <p className="text-gray-500">Commercial Client</p>
-                </div>
-              </div>
-              <p className="text-gray-600">
-                "Z Double B Construction delivered our office renovation project on time and on budget. Their attention to detail and quality of work exceeded our expectations."
-              </p>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
-                  <svg className="h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.309 17.708C22.196 15.66 22.006 13.03 22 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292zm-11.007 0C11.19 15.66 10.999 13.03 10.993 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292z"/>
-                  </svg>
-                </div>
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">Sarah Johnson</h4>
-                  <p className="text-gray-500">Residential Client</p>
-                </div>
-              </div>
-              <p className="text-gray-600">
-                "We couldn't be happier with our new home. The Z Double B team was professional, responsive, and truly cared about bringing our vision to life."
-              </p>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
-                  <svg className="h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.309 17.708C22.196 15.66 22.006 13.03 22 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292zm-11.007 0C11.19 15.66 10.999 13.03 10.993 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292z"/>
-                  </svg>
-                </div>
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">Michael Brown</h4>
-                  <p className="text-gray-500">Restaurant Owner</p>
-                </div>
-              </div>
-              <p className="text-gray-600">
-                "The renovation of our restaurant was completed with minimal disruption to our business. The quality of work was exceptional and our customers love the new space."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TestimonialCarousel testimonials={testimonials} />
 
       {/* CTA Section */}
       <section className="bg-blue-700">
