@@ -105,10 +105,10 @@ const project = {
   title: "Downtown Office Building",
   slug: "downtown-office-building",
   category: "Commercial",
-  description: "A modern 10-story commercial space in Calgary's business district.",
+  description: "A modern 10-story commercial space in Arvada's business district.",
   image: "/images/projects/project1.jpg",
   clientLogo: "/images/clients/client1.png",
-  location: "Calgary, AB",
+  location: "Arvada, AB",
   completionDate: "2022",
   stats: [
     { label: "Size", value: "125,000 sq ft" },

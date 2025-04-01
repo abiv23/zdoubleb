@@ -7,7 +7,7 @@ import AnimatedStats from '@/components/home/animated-stats';
 
 export const metadata = {
   title: "Denver's Premier Window Company",
-  description: "Z Double B Construction provides high-quality construction services in Denver, Arvada, and Boulder. Specializing in commercial and residential construction.",
+  description: "Z Double B Construction provides high-quality Window and Construction in Denver, Arvada, and Boulder. Specializing in commercial and residential construction.",
 };
 
 const testimonials = [
@@ -140,7 +140,7 @@ export default function HomePage() {
                 Why Choose Z Double B Construction
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-500">
-                With years of experience in the Calgary construction industry, we've built our reputation on quality workmanship, timely project completion, and exceptional customer service.
+                With years of experience in the Arvada construction industry, we've built our reputation on quality workmanship, timely project completion, and exceptional customer service.
               </p>
               
               <div className="mt-8 space-y-4">
@@ -230,7 +230,7 @@ export default function HomePage() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900">Downtown Office Building</h3>
                 <p className="mt-2 text-gray-500">
-                  A modern 10-story commercial space in Calgary's business district.
+                  A modern 10-story commercial space in Arvada's business district.
                 </p>
                 <div className="mt-4">
                   <Link href="/projects/downtown-office-building" className="text-blue-600 hover:text-blue-500">
@@ -254,7 +254,7 @@ export default function HomePage() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900">Luxury Home Development</h3>
                 <p className="mt-2 text-gray-500">
-                  A collection of custom-designed homes in an exclusive Calgary neighborhood.
+                  A collection of custom-designed homes in an exclusive Arvada neighborhood.
                 </p>
                 <div className="mt-4">
                   <Link href="/projects/luxury-home-development" className="text-blue-600 hover:text-blue-500">

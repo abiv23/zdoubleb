@@ -2,7 +2,6 @@
 "use client";
 
 import { useState } from 'react';
-import Image from 'next/image';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -83,7 +82,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div className="ml-3 text-base text-gray-500">
-                  <p>(403) 123-4567</p>
+                  <p>(720) 422-1012</p>
                   <p className="mt-1">Mon-Fri 8am to 6pm</p>
                 </div>
               </div>
@@ -106,7 +105,7 @@ export default function ContactPage() {
                 </div>
                 <div className="ml-3 text-base text-gray-500">
                   <p>123 Construction Avenue</p>
-                  <p className="mt-1">Calgary, Alberta T2P 1A2</p>
+                  <p className="mt-1">Arvada, Colorado T2P 1A2</p>
                 </div>
               </div>
             </div>

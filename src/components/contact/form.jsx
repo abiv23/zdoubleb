@@ -34,7 +34,7 @@ export default function ParallaxHero() {
         <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
         <Image
           src="/images/construction-hero.jpg"
-          alt="Z Double B Construction - Building Calgary's Future"
+          alt="Z Double B Construction - Building Arvada's Future"
           fill
           priority
           className="object-cover"
@@ -50,7 +50,7 @@ export default function ParallaxHero() {
               className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl animate-slide-up" 
               style={{ animationDelay: '200ms' }}
             >
-              <span className="block mb-2">Building Calgary's</span>
+              <span className="block mb-2">Building Arvada's</span>
               <span className="block text-blue-400">Future Together</span>
             </h1>
           </div>
@@ -59,7 +59,7 @@ export default function ParallaxHero() {
               className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl md:mx-0 animate-slide-up"
               style={{ animationDelay: '400ms' }}
             >
-              Quality construction services with a focus on client satisfaction, craftsmanship, and timely delivery.
+              Quality Window and Construction with a focus on client satisfaction, craftsmanship, and timely delivery.
             </p>
           </div>
           <div 
